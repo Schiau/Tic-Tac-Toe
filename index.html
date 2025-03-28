@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <maine>
+        <dialog open id="dialogInputNames">
+            <p>Input players name</p>
+            <form method="dialog">
+                <label for="player1">
+                    Player 1 name: 
+                    <input
+                    id="player1"
+                    placeholder="Player 1 name"
+                    type="text"
+                    required
+                >
+                </label>
+                <label for="player2">
+                    Player 2 name: 
+                    <input
+                    id="player2"
+                    placeholder="Player 2 name"
+                    type="text"
+                    required
+                >
+                </label>
+                <button id="btn-submite-player-names">OK</button>
+            </form>
+          </dialog>
+
+          <dialog id="game-over-dialog">
+            <p>Game over! The winner is <span id="winner"></span></p>
+            <button id="close-btn">Close</button>
+          </dialog>
+
+        <section class="board">
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+            <button class="game-spot"></button>
+        </section>
+        <section>
+            <p id="player1-name"></p>
+            <p id="score"></p>
+            <p id="player2-name"></p>
+        </section>
+    </maine>
+    <script src="./tic-tac-toe.js"></script>
+</body>
+</html>
