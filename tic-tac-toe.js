@@ -153,6 +153,8 @@ const game = (function(){
     }
 
     const gameIsFinished = () => {
+        console.log(player1.getName())
+        console.log(player2.getName())
         if(player1.hasWon()){
             return {gameIsFinished: true, winner: player1.getName() };
         }  
@@ -178,10 +180,17 @@ gameSpotTags.forEach((element, index) => {
     });
 });
 
+
 btnPlayerNamesTag.addEventListener('click', () => {
     player1NameTag.textContent = player1InputNameTag.value;
     player2NameTag.textContent = player2InputNameTag.value;
-    game.resetGame(player1InputNameTag.value, player1InputNameTag.value);
+    if (player1InputNameTag.value ===''){
+        return;
+    }
+    if (player2InputNameTag.value ===''){
+        return;
+    }
+    game.resetGame(player1InputNameTag.value, player2InputNameTag.value);
     player1NameTag.textContent = player1InputNameTag.value;
     player2NameTag.textContent = player2InputNameTag.value;
     scoreTag.textContent = game.getScore();
@@ -190,4 +199,7 @@ btnPlayerNamesTag.addEventListener('click', () => {
 closeBtn.addEventListener('click', () =>{
     dialogWinnerTag.close();
     startDialogTag.showModal();
+    game.resetGame()
 })
+
+startDialogTag.showModal();

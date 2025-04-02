@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <maine>
-        <dialog open id="dialogInputNames">
+
+    <dialog id="dialogInputNames">
+        <div class="container">
             <p>Input players name</p>
             <form method="dialog">
                 <label for="player1">
@@ -31,13 +32,17 @@
                 </label>
                 <button id="btn-submite-player-names">OK</button>
             </form>
-          </dialog>
+        </div>
+      </dialog>
 
-          <dialog id="game-over-dialog">
+      <dialog id="game-over-dialog">
+        <div class="container">
             <p>Game over! The winner is <span id="winner"></span></p>
             <button id="close-btn">Close</button>
-          </dialog>
+        </div>
+      </dialog>
 
+    <maine>
         <section class="board">
             <button class="game-spot"></button>
             <button class="game-spot"></button>
@@ -49,10 +54,12 @@
             <button class="game-spot"></button>
             <button class="game-spot"></button>
         </section>
-        <section>
-            <p id="player1-name"></p>
+        <section class="stats">
+            <div class="player-names">
+                <p id="player1-name"></p>
+                <p id="player2-name"></p>
+            </div>
             <p id="score"></p>
-            <p id="player2-name"></p>
         </section>
     </maine>
     <script src="./tic-tac-toe.js"></script>
